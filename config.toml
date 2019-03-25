@@ -1,0 +1,62 @@
+baseURL = "http://example.com/"
+description = "This domain is established to be used for illustrative examples in documents. You may use this domain in examples without prior coordination or asking for permission."
+languageCode = "en-us"
+theme = "site-theme"
+title = "Example"
+[[menu.desktop]]
+identifier = "menu-desktop-1"
+name = "Menu Item 1"
+url = "/page-1"
+weight = 1
+[[menu.desktop]]
+identifier = "menu-desktop-2"
+name = "Menu Item 2"
+url = "/page-2"
+weight = 2
+[[menu.desktop]]
+identifier = "menu-desktop-3"
+name = "Menu Item 3"
+url = "/page-3"
+weight = 3
+[[menu.desktop]]
+identifier = "menu-desktop-4"
+name = "Menu Item 4"
+url = "/page-4"
+weight = 4
+[[menu.mobile]]
+identifier = "menu-mobile-1"
+name = "Menu Item 1"
+url = "/page-1"
+weight = 1
+[[menu.mobile]]
+identifier = "menu-mobile-2"
+name = "Menu Item 2"
+url = "/page-2"
+weight = 2
+[[menu.mobile]]
+identifier = "menu-mobile-3"
+name = "Menu Item 3"
+url = "/page-3"
+weight = 3
+[params.Contact_Numbers]
+Fax = "555.555.5555"
+Phone = "555.555.5555"
+[params.Logos]
+dark_logo = "/pageimg/default-logo.png"
+logo = "/pageimg/Logo1@4x.png"
+mobile_menu_logo = "/pageimg/Logo1@4x.png"
+[params.address]
+city = "Statesboro"
+state = "GA"
+street = "P.O. Box 134"
+zip = 30459
+[params.email]
+email = "example@example.com"
+[params.tracking]
+google_analytics = ""
+cloudinary_url = ""
+[params.social_links]
+facebook = ""
+insta = ""
+linkedin = ""
+pinterest = ""

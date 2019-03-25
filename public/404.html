@@ -1,0 +1,135 @@
+<!DOCTYPE html><html lang="en-us"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title> - Example </title><meta name="description" content=""><meta name="HandheldFriendly" content="True"><meta name="MobileOptimized" content="320"><meta name="viewport" content="width=device-width,minimum-scale=1"><meta name="generator" content="Hugo 0.38.2" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW"><link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favi/apple-touch-icon-57x57.png" /><link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favi/apple-touch-icon-114x114.png" /><link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favi/apple-touch-icon-72x72.png" /><link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favi/apple-touch-icon-144x144.png" /><link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favi/apple-touch-icon-60x60.png" /><link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favi/apple-touch-icon-120x120.png" /><link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favi/apple-touch-icon-76x76.png" /><link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favi/apple-touch-icon-152x152.png" /><link rel="icon" type="image/ico" href="/favi/favicon.ico" /><link rel="icon" type="image/png" href="/favi/favicon-196x196.png" sizes="196x196" /><link rel="icon" type="image/png" href="/favi/favicon-96x96.png" sizes="96x96" /><link rel="icon" type="image/png" href="/favi/favicon-32x32.png" sizes="32x32" /><link rel="icon" type="image/png" href="/favi/favicon-16x16.png" sizes="16x16" /><link rel="icon" type="image/png" href="/favi/favicon-128.png" sizes="128x128" /><meta name="application-name" content="&nbsp;"/><meta name="msapplication-TileColor" content="#FFFFFF" /><meta name="msapplication-TileImage" content="/favi/mstile-144x144.png" /><meta name="msapplication-square70x70logo" content="/favi/mstile-70x70.png" /><meta name="msapplication-square150x150logo" content="/favi/mstile-150x150.png" /><meta name="msapplication-wide310x150logo" content="/favi/mstile-310x150.png" /><meta name="msapplication-square310x310logo" content="/favi/mstile-310x310.png" /><link href="http://example.com/dist/css/app.css" rel="stylesheet"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"><meta name="generator" content="Hugo 0.38.2" /><script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id="></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', '');</script></head>
+
+<body class="">
+  <style>
+
+</style>
+
+<div id="header-functions">
+
+<section id="header" class="header-container">
+        <div class="container flex flex-wrap items-center px-5 py-8 lg:py-0 header-box">
+<a id="logo" class="w-1/3 lg:w-1/4 xl:w-1/6 mx-auto" href="/">
+  <img class="" src="/pageimg/default-logo.png">
+</a>
+<nav id="navigation-wrapper" class="w-2/3 lg:max-w-md xl:max-w-lg xxl:max-w-xl ml-auto text-right">
+
+<div class="w-full text-center items-center desktop-menu">
+  
+  
+  <a class=" inline-flex w-1/4 py-2 mx-3 desktop-menu-item menu item 1-menu" href="/page-1"><span class="mx-auto">Menu Item 1</span></a>
+  
+  <a class=" inline-flex w-1/4 py-2 mx-3 desktop-menu-item menu item 2-menu" href="/page-2"><span class="mx-auto">Menu Item 2</span></a>
+  
+  <a class=" inline-flex w-1/4 py-2 mx-3 desktop-menu-item menu item 3-menu" href="/page-3"><span class="mx-auto">Menu Item 3</span></a>
+  
+  <a class=" inline-flex w-1/4 py-2 mx-3 desktop-menu-item menu item 4-menu" href="/page-4"><span class="mx-auto">Menu Item 4</span></a>
+  
+  <div class="w-full lg:max-w-md xl:max-w-lg xxl:max-w-xl text-center py-3 desktop-mega-services">
+    
+    
+  </div>
+</div>
+
+<div id="mobile-menu" class="">
+  <div class="mobile-menu-button ml-auto w-10">
+    <a class="" href="#"><button v-on:click="menuToggle = !menuToggle" class=""><i class="fas fa-bars"></i></button></a>
+  </div>
+</div>
+
+</nav>
+</div>
+</section>
+
+<div id="mobile-menu" class="mobile-menu" v-bind:class="{ 'mobile-menu-toggle' : menuToggle }">
+  <div class="mobile-menu-container">
+  <div class="container flex items-center px-5 py-8">
+  <a id="mobile-menu-logo" class="flex-1 text-left" href="/">
+    <img class="" src="/pageimg/default-logo.png">
+  </a>
+  <a class="ml-auto w-10 text-center close-menu" v-on:click="menuToggle = !menuToggle"><i class="far fa-times-circle"></i></a>
+  </div>
+  <ul class="text-center px-0 pt-5 pb-10 mobile-menu-list">
+    
+    
+    <li class="pt-2 pb-4 mobile-menu-item"><a class="" href="/page-1">Menu Item 1</a></li>
+    
+    <li class="pt-2 pb-4 mobile-menu-item"><a class="" href="/page-2">Menu Item 2</a></li>
+    
+    <li class="pt-2 pb-4 mobile-menu-item"><a class="" href="/page-3">Menu Item 3</a></li>
+    
+  </ul>
+</div>
+</div>
+
+</div>
+    <main role="main">
+      
+  <article class="py-5 text-center">
+    <h1>
+      404 Page Not Found
+    </h1>
+    <a href="/">
+      <button>Return to Home Page</button>
+    </a>
+  </article>
+
+    </main>
+  <style>
+  
+</style>
+
+<footer class="flex flex-wrap pt-5 pb-5">
+  
+</footer>
+
+<div id="go-to-top-button">
+  <div id="elevator-button" :class="{hidegotoTop: scrollPosition < 200, showgotoTop: scrollPosition > 500}">
+      <i class="fas fa-arrow-circle-up"></i>
+  </div>
+</div>
+  
+
+  <script defer src="http://example.com/dist/js/app.17117bdd9335e095321c.js"></script>
+
+
+<script>
+
+var siteFunctions = new Vue({
+    el: '#header-functions',
+    data: {
+      menuToggle: false
+    },
+});
+
+var footerFunctions = new Vue({
+    el: '#go-to-top-button',
+    data: {
+      scrollPosition: null
+    },
+    methods: {
+     updateScroll() {
+       this.scrollPosition = window.scrollY
+     }
+   },
+ 
+   mounted() {
+     window.addEventListener('scroll', this.updateScroll);
+   },
+});
+</script>
+
+<script>
+var Elevator=function(n){"use strict";function e(n,e,t,o){return n/=o/2,1>n?t/2*n*n+e:(n--,-t/2*(n*(n-2)-1)+e)}function t(n,e){for(var t in e){var o=void 0===n[t]&&"function"!=typeof t;o&&(n[t]=e[t])}return n}function o(n){for(var e=0;n;)e+=n.offsetTop||0,n=n.offsetParent;return g&&(e-=g),e}function l(n){T||(T=n);var t=n-T,o=e(t,k,y-k,b);window.scrollTo(0,o),b>t?w=requestAnimationFrame(l):r()}function i(){return window.requestAnimationFrame&&window.Audio&&window.addEventListener}function u(){T=null,k=null,h=!1}function a(){C&&(y=o(C))}function r(){u(),f&&(f.pause(),f.currentTime=0),p&&p.play(),v&&v()}function d(){h&&(cancelAnimationFrame(w),u(),f&&(f.pause(),f.currentTime=0),a(),window.scrollTo(0,y))}function c(n){n.addEventListener?n.addEventListener("click",F.elevate,!1):n.attachEvent("onclick",function(){a(),document.documentElement.scrollTop=y,document.body.scrollTop=y,window.scroll(0,y)})}function s(n){A=document.body;var e={duration:void 0,mainAudio:!1,endAudio:!1,preloadAudio:!0,loopAudio:!0,startCallback:null,endCallback:null};n=t(n,e),n.element&&c(n.element),i()&&(n.duration&&(E=!0,b=n.duration),n.targetElement&&(C=n.targetElement),n.verticalPadding&&(g=n.verticalPadding),window.addEventListener("blur",d,!1),n.mainAudio&&(f=new Audio(n.mainAudio),f.setAttribute("preload",n.preloadAudio),f.setAttribute("loop",n.loopAudio)),n.endAudio&&(p=new Audio(n.endAudio),p.setAttribute("preload","true")),n.endCallback&&(v=n.endCallback),n.startCallback&&(m=n.startCallback))}var m,f,p,v,A=null,w=null,b=null,E=!1,T=null,k=null,y=0,C=null,g=null,h=!1,F=this;this.elevate=function(){h||(h=!0,k=document.documentElement.scrollTop||A.scrollTop,a(),E||(b=1.5*Math.abs(y-k)),requestAnimationFrame(l),f&&f.play(),m&&m())},s(n)};"undefined"!=typeof module&&module.exports&&(module.exports=Elevator);
+</script>
+
+<script>
+window.onload = function() {
+      var elevator = new Elevator({
+        element: document.querySelector('#go-to-top-button'),
+        duration: 1000
+      });
+}
+</script>
+</body>
+</html>

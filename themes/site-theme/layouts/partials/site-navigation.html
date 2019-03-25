@@ -1,0 +1,24 @@
+<nav id="navigation-wrapper" class="w-2/3 lg:max-w-md xl:max-w-lg xxl:max-w-xl ml-auto text-right">
+
+<div class="w-full text-center items-center desktop-menu">
+  {{ $currentNode := . }}
+  {{ range .Site.Menus.desktop }}
+  <a class="{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}} inline-flex w-1/4 py-2 mx-3 desktop-menu-item {{ lower .Name }}-menu" href="{{.URL}}"><span class="mx-auto">{{ .Name }}</span></a>
+  {{ end }}
+  <div class="w-full lg:max-w-md xl:max-w-lg xxl:max-w-xl text-center py-3 desktop-mega-services">
+    {{ $currentNode := . }}
+    {{ range .Site.Menus.service }}
+    <div class="inline-flex h-full lg:w-48 xl:w-64">
+    <a class="{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}} mx-auto desktop-menu-item" href="{{.URL}}">{{ .Pre }}</a>
+    </div>
+    {{ end }}
+  </div>
+</div>
+
+<div id="mobile-menu" class="">
+  <div class="mobile-menu-button ml-auto w-10">
+    <a class="" href="#"><button v-on:click="menuToggle = !menuToggle" class=""><i class="fas fa-bars"></i></button></a>
+  </div>
+</div>
+
+</nav>

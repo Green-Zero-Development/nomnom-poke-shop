@@ -1,0 +1,1 @@
+{{ .Hugo.Generator }}{{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}<script src="https://cdn.jsdelivr.net/npm/vue"></script>{{ else }}<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>{{ end }}
