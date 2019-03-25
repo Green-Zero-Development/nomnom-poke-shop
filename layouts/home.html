@@ -1,9 +1,33 @@
 {{ define "main" }}
 
-<div class="container mx-auto text-center">
-  <h1>
-    This is the home page
-  </h1>
+<style>
+.hero-section {
+  background-image: url("/pageimg/poke.jpg");
+  background-size: cover;
+  width: 100%;
+  z-index: -999;
+  background-position-x: center;
+}
+.overlay-black {
+  background-color: rgba(30,109,152,.2);
+}
+
+/* font-family: 'Raleway', sans-serif;
+font-family: 'Kameron', serif; */
+
+</style>
+
+<div class="max-w-5xl absolute xxl:relative xxl:-mt-48 mx-auto text-center pin-t h-auto hero-section">
+  <div class="flex flex-wrap relative pin-t h-auto overlay-black">
+    <div class="w-2/3 mx-auto text-center pt-32">
+      <div class="py-24"></div>
+      <h1 class="font-raleway font-bold uppercase text-4xl lg:text-7xl leading-none text-white pb-8">
+          BEST BURGER IN BROOKLYN
+      </h1>
+      <h2 class="font-raleway text-xl text-white font-thin">LOCALLY SOURCED × CRAFTED WITH LOVE</h2>
+      <div class="py-32"></div>
+    </div>
+  </div>
 </div>
 
 <div class="home-page-scroll-tool">

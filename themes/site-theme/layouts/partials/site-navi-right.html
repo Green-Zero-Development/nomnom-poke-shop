@@ -1,0 +1,16 @@
+<nav id="navigation-wrapper" class="w-1/2 md:w-3/4 lg:w-1/3 mr-auto text-left">
+
+<div class="w-full text-left items-center desktop-menu">
+  {{ $currentNode := . }}
+  {{ range .Site.Menus.desktop_right }}
+  <a class="{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}} w-1/4 font-raleway text-base text-white no-underline uppercase font-black opacity-75 hover:opacity-100 py-2 mx-3 desktop-menu-item {{ lower .Name }}-menu" href="{{.URL}}"><span class="mx-auto">{{ .Name }}</span></a>
+  {{ end }}
+</div>
+
+<div id="mobile-menu" class="">
+  <div class="mobile-menu-button mx-auto md:mx-0 md:ml-auto text-right md:text-center md:text-left w-16">
+    <a class="" href="#"><button v-on:click="menuToggle = !menuToggle" class=""><i class="text-3xl md:text-5xl fas fa-bars"></i></button></a>
+  </div>
+</div>
+
+</nav>

@@ -1,30 +1,33 @@
 <style>
-
+.desktop-menu-item {
+  transition: .2s;
+}
 </style>
 
-<div id="header-functions">
+<div id="header-functions" class="z-50">
 
-<section id="header" class="header-container">
-        <div class="container flex flex-wrap items-center px-5 py-8 lg:py-0 header-box">
-<a id="logo" class="w-1/3 lg:w-1/4 xl:w-1/6 mx-auto" href="/">
-  <img class="w-48" src="{{ .Site.Params.logos.logo }}">
-</a>
-{{ partial "site-navigation.html" . }}
-</div>
+<section id="header" class="container flex flex-wrap items-center z-50 header-container">
+{{ partial "site-navi-left.html" . }}
+  <div class="w-1/2 md:w-1/4 lg:w-1/6 m-0 text-center px-2 py-8 lg:py-0 header-box">
+    <a id="logo" class="mx-auto" href="/">
+      <img class="w-32 md:w-38" src="{{ .Site.Params.logos.logo }}">
+    </a>
+  </div>
+{{ partial "site-navi-right.html" . }}
 </section>
 
-<div id="mobile-menu" class="mobile-menu" v-bind:class="{ 'mobile-menu-toggle' : menuToggle }">
+<div id="mobile-menu" class="bg-black h-screen mobile-menu" v-bind:class="{ 'mobile-menu-toggle' : menuToggle }">
   <div class="mobile-menu-container">
-  <div class="container flex items-center px-5 py-8">
-  <a id="mobile-menu-logo" class="flex-1 text-left" href="/">
-    <img class="" src="{{ .Site.Params.logos.mobile_menu_logo }}">
+  <div class="container flex items-center py-8">
+  <a id="logo" class="w-1/2 md:w-1/4 mx-auto md:mx-0 md:mr-auto" href="/">
+      <img class="w-32 md:w-48" src="{{ .Site.Params.logos.mobile_menu_logo }}">
   </a>
-  <a class="ml-auto w-10 text-center close-menu" v-on:click="menuToggle = !menuToggle"><i class="far fa-times-circle"></i></a>
+  <a class="mx-auto sm:mx-0 sm:mr-auto md:mr-0 md:ml-auto w-16 text-center sm:text-left md:text-center close-menu" v-on:click="menuToggle = !menuToggle"><i class="text-3xl md:text-5xl text-white far fa-times-circle"></i></a>
   </div>
   <ul class="text-center px-0 pt-5 pb-10 mobile-menu-list">
     {{ $currentNode := . }}
     {{ range .Site.Menus.mobile }}
-    <li class="pt-2 pb-4 mobile-menu-item">{{ .Pre }}<a class="{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}}" href="{{.URL}}">{{ .Name }}</a>{{ .Post }}</li>
+    <li class="pt-2 pb-4 mobile-menu-item"><a class="{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}}" href="{{.URL}}">{{ .Name }}</a></li>
     {{ end }}
   </ul>
 </div>

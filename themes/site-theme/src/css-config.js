@@ -44,6 +44,7 @@ let defaultConfig = require('tailwindcss/defaultConfig')()
 */
 
 let colors = {
+  'color-ef5124': '#ef5124',
   'transparent': 'transparent',
 
   'black': '#22292f',
@@ -195,6 +196,10 @@ module.exports = {
   */
 
   fonts: {
+    'raleway': [
+      'Raleway',
+      'sans-serif',
+    ],
     'sans': [
       'system-ui',
       'BlinkMacSystemFont',
@@ -262,6 +267,8 @@ module.exports = {
     '3xl': '1.875rem',  // 30px
     '4xl': '2.25rem',   // 36px
     '5xl': '3rem',      // 48px
+    '6xl': '4rem',
+    '7xl': '5rem',
   },
 
 
@@ -495,6 +502,7 @@ module.exports = {
     '16': '4rem',
     '24': '6rem',
     '32': '8rem',
+    '38': '10rem',
     '48': '12rem',
     '64': '16rem',
     '1/2': '50%',
@@ -748,6 +756,7 @@ module.exports = {
     '20': '5rem',
     '24': '6rem',
     '32': '8rem',
+    '48': '10rem',
   },
 
 
@@ -915,7 +924,7 @@ module.exports = {
     negativeMargin: ['responsive'],
     objectFit: false,
     objectPosition: false,
-    opacity: ['responsive'],
+    opacity: ['responsive', 'hover'],
     outline: ['focus'],
     overflow: ['responsive'],
     padding: ['responsive'],

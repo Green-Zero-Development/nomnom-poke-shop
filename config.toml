@@ -3,48 +3,73 @@ description = "This domain is established to be used for illustrative examples i
 languageCode = "en-us"
 theme = "site-theme"
 title = "Example"
-[[menu.desktop]]
-identifier = "menu-desktop-1"
-name = "Menu Item 1"
-url = "/page-1"
+[[menu.desktop_left]]
+identifier = "home"
+name = "Home"
+url = "/"
 weight = 1
-[[menu.desktop]]
-identifier = "menu-desktop-2"
-name = "Menu Item 2"
-url = "/page-2"
+[[menu.desktop_left]]
+identifier = "Restaurant"
+name = "Restaurant"
+url = "/#restaurant"
 weight = 2
-[[menu.desktop]]
-identifier = "menu-desktop-3"
-name = "Menu Item 3"
-url = "/page-3"
+[[menu.desktop_left]]
+identifier = "Menu"
+name = "Menu"
+url = "/#menu"
 weight = 3
-[[menu.desktop]]
-identifier = "menu-desktop-4"
-name = "Menu Item 4"
-url = "/page-4"
+[[menu.desktop_right]]
+identifier = "drinks"
+name = "Drinks"
+url = "/#drinks"
+weight = 1
+[[menu.desktop_right]]
+identifier = "Reservations"
+name = "Reservations"
+url = "/#reservations"
+weight = 2
+[[menu.desktop_right]]
+identifier = "ReadMe"
+name = "ReadMe"
+url = "/#readme"
+weight = 3
+[[menu.mobile]]
+identifier = "home"
+name = "Home"
+url = "/"
+weight = 1
+[[menu.mobile]]
+identifier = "Restaurant"
+name = "Restaurant"
+url = "/#restaurant"
+weight = 2
+[[menu.mobile]]
+identifier = "Menu"
+name = "Menu"
+url = "/#menu"
+weight = 3
+[[menu.mobile]]
+identifier = "drinks"
+name = "Drinks"
+url = "/#drinks"
 weight = 4
 [[menu.mobile]]
-identifier = "menu-mobile-1"
-name = "Menu Item 1"
-url = "/page-1"
-weight = 1
+identifier = "Reservations"
+name = "Reservations"
+url = "/#reservations"
+weight = 5
 [[menu.mobile]]
-identifier = "menu-mobile-2"
-name = "Menu Item 2"
-url = "/page-2"
-weight = 2
-[[menu.mobile]]
-identifier = "menu-mobile-3"
-name = "Menu Item 3"
-url = "/page-3"
-weight = 3
+identifier = "ReadMe"
+name = "ReadMe"
+url = "/#readme"
+weight = 6
 [params.Contact_Numbers]
 Fax = "555.555.5555"
 Phone = "555.555.5555"
 [params.Logos]
 dark_logo = "/pageimg/default-logo.png"
-logo = "/pageimg/Logo1@4x.png"
-mobile_menu_logo = "/pageimg/Logo1@4x.png"
+logo = "/pageimg/Logo4@4x.png"
+mobile_menu_logo = "/pageimg/Logo3@4x.png"
 [params.address]
 city = "Statesboro"
 state = "GA"
