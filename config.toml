@@ -1,4 +1,4 @@
-baseURL = "http://example.com/"
+baseURL = "https://nomnom-poke-shop.netlify.com/"
 description = "This domain is established to be used for illustrative examples in documents. You may use this domain in examples without prior coordination or asking for permission."
 languageCode = "en-us"
 theme = "site-theme"
