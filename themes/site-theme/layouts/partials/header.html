@@ -20,9 +20,9 @@
   <div class="mobile-menu-container">
   <div class="container flex items-center py-8">
   <a id="logo" class="w-1/2 md:w-1/4 mx-auto md:mx-0 md:mr-auto" href="/">
-      <img class="w-38 md:pl-4" src="{{ .Site.Params.logos.mobile_menu_logo }}">
+      <img class="w-32 md:w-38 md:pl-4" src="{{ .Site.Params.logos.mobile_menu_logo }}">
   </a>
-  <a class="mx-auto sm:mx-0 sm:mr-auto md:mr-0 md:ml-auto w-16 text-center sm:text-left md:text-center pr-24 close-menu" v-on:click="menuToggle = !menuToggle"><i class="text-6xl text-white far fa-times-circle"></i></a>
+  <a class="mx-auto sm:mx-0 sm:mr-auto md:mr-0 md:ml-auto w-16 text-center sm:text-left md:text-center md:pr-24 close-menu" v-on:click="menuToggle = !menuToggle"><i class="text-5xl text-white far fa-times-circle"></i></a>
   </div>
   <ul class="text-center px-0 pt-5 pb-10 mobile-menu-list">
     {{ $currentNode := . }}

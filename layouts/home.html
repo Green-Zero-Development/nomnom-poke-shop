@@ -12,12 +12,40 @@
   background-color: rgba(30,109,152,.2);
 }
 
+#about-the-restaurant {
+  padding-top: 600px;
+}
+
+.lighter-text {
+  color: rgba(0,0,0,.5);
+}
+
+@media (min-width: 992px) {
+#about-the-restaurant {
+  padding-top: 750px;
+}
+
+}
+
+@media (min-width: 1200px) {
+#about-the-restaurant {
+  padding-top: 700px;
+}
+
+}
+
+@media (min-width: 1440px) {
+  #about-the-restaurant {
+  padding-top: 100px;
+}
+}
+
 /* font-family: 'Raleway', sans-serif;
 font-family: 'Kameron', serif; */
 
 </style>
 
-<div class="max-w-5xl absolute xxl:relative xxl:-mt-48 mx-auto text-center pin-t h-auto hero-section">
+<section id="site-hero" class="max-w-5xl absolute xxl:relative xxl:-mt-48 mx-auto text-center pin-t h-auto hero-section">
   <div class="flex flex-wrap relative pin-t h-auto overlay-black">
     <div class="w-2/3 mx-auto text-center pt-32">
       <div class="py-24"></div>
@@ -28,9 +56,29 @@ font-family: 'Kameron', serif; */
       <div class="py-32"></div>
     </div>
   </div>
-</div>
+</section>
 
-<div class="home-page-scroll-tool">
-</div>
+<section id="about-the-restaurant" class="container flex flex-wrap pb-32">
+  <div class="flex flex-wrap w-5/6 mx-auto">
+    <div class="w-full lg:w-2/3 mx-auto pr-8">
+      <h2 class="font-raleway text-xl lg:text-3xl font-medium leading-normal">Located in Park Slope, Pacific Tavern is a purveyor of fine American dining from the esteemed Chef Billy Lang.</h2>
+      <h4 class="font-raleway text-sm uppercase font-thin pt-6 pb-12">PHOTOS BY NICOLE FRANZEN</h4>
+      <p class="font-raleway text-base font-normal pb-6 leading-normal tracking-wide lighter-text">Pacific Tavern opened in May 2010 and is located inside the Smith Hotel Brooklyn. Since then, Golden Spork winner Chef Lang has been serving both quality interpretations of classic dishes and daring new ventures into the uncharted territories of food.</p>
+      <p class="font-raleway text-base font-normal leading-normal tracking-wide lighter-text">Pacific Tavern's interior, designed by the award-winning Hayden Collective, reflects the hip sensibilities of the surrounding area while also paying tribute to Brooklyn's storied past. The multi-level restaurant offers the choice to observe passers-by in the glass-encased Cascade Bar on the 2nd floor, or watch the art of cooking as it occurs in the open-kitchen dining room.</p>
+    </div>
+    <div class="w-full lg:w-1/5 mx-auto pt-16 lg:pt-0">
+      <h2 class="font-raleway text-base font-thin uppercase pb-5">Phone</h2>
+      <h4 class="font-raleway text-base font-light pb-16 lighter-text">(347) 555-1234</h4>
+      <h2 class="font-raleway text-base font-thin uppercase pb-5">Location</h2>
+      <h4 class="font-raleway text-base font-light pb-3 lighter-text">74 5th Avenue</h4>
+      <h4 class="font-raleway text-base font-light pb-3 lighter-text">at St. Marks Place</h4>
+      <h4 class="font-raleway text-base font-light pb-16 lighter-text">Brooklyn, NY 11217</h4>
+      <h2 class="font-raleway text-base font-thin uppercase pb-5">Hours</h2>
+      <h4 class="font-raleway text-base font-light pb-3 lighter-text"><span class="font-bold">M-Th</span> 5p–11p</h4>
+      <h4 class="font-raleway text-base font-light pb-3 lighter-text"><span class="font-bold">F-Sa</span> 12p–11p</h4>
+      <h4 class="font-raleway text-base font-light pb-16 lighter-text"><span class="font-bold">Su</span> 10a–11p</h4>
+    </div>
+  </div>
+</section>
 
 {{ end }}
