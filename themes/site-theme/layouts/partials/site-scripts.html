@@ -5,28 +5,28 @@
 
 <script>
 
-var siteFunctions = new Vue({
-    el: '#header-functions',
-    data: {
-      menuToggle: false
-    },
-});
+// var siteFunctions = new Vue({
+//     el: '#header-functions',
+//     data: {
+//       menuToggle: false
+//     },
+// });
 
-var footerFunctions = new Vue({
-    el: '#go-to-top-button',
-    data: {
-      scrollPosition: null
-    },
-    methods: {
-     updateScroll() {
-       this.scrollPosition = window.scrollY
-     }
-   },
+// var footerFunctions = new Vue({
+//     el: '#go-to-top-button',
+//     data: {
+//       scrollPosition: null
+//     },
+//     methods: {
+//      updateScroll() {
+//        this.scrollPosition = window.scrollY
+//      }
+//    },
  
-   mounted() {
-     window.addEventListener('scroll', this.updateScroll);
-   },
-});
+//    mounted() {
+//      window.addEventListener('scroll', this.updateScroll);
+//    },
+// });
 </script>
 
 {{ partial "js/elevator.min.js.html" . }}

@@ -20,6 +20,30 @@
   color: rgba(0,0,0,.5);
 }
 
+.food-slider-dots {
+  list-style: none;
+  margin-top: -50px;
+  z-index: 999;
+  position: absolute;
+}
+
+.food-slider-dots li button:before {
+  font-family: "Font Awesome 5 Free"; 
+  content: "\f111";
+  font-size: 12px !important;
+  padding: 0 5px 0 5px;
+  color: white;
+}
+
+.food-slider-dots .slick-active button:before {
+  font-weight: 900;
+}
+
+.food-slider-dots li button { 
+   font-size: 0; 
+} 
+
+
 @media (min-width: 992px) {
 #about-the-restaurant {
   padding-top: 750px;
@@ -77,6 +101,26 @@ font-family: 'Kameron', serif; */
       <h4 class="font-raleway text-base font-light pb-3 lighter-text"><span class="font-bold">M-Th</span> 5p–11p</h4>
       <h4 class="font-raleway text-base font-light pb-3 lighter-text"><span class="font-bold">F-Sa</span> 12p–11p</h4>
       <h4 class="font-raleway text-base font-light pb-16 lighter-text"><span class="font-bold">Su</span> 10a–11p</h4>
+    </div>
+  </div>
+</section>
+
+<section id="food-slider-section" class="flex flex-wrap">
+  <div class="w-full food-slider">
+    <div class="w-full food-slider-image" style="background-image:url('/pageimg/poke.jpg');background-size:cover;background-repeat:no-repeat;background-position-x:center;">
+      <div class="py-32"></div>
+      <div class="py-32"></div>
+      <div class="py-12"></div>
+    </div>
+    <div class="w-full food-slider-image" style="background-image:url('/pageimg/poke.jpg');background-size:cover;background-repeat:no-repeat;background-position-x:center;">
+      <div class="py-32"></div>
+      <div class="py-32"></div>
+      <div class="py-12"></div>
+    </div>
+    <div class="w-full food-slider-image" style="background-image:url('/pageimg/poke.jpg');background-size:cover;background-repeat:no-repeat;background-position-x:center;">
+      <div class="py-32"></div>
+      <div class="py-32"></div>
+      <div class="py-12"></div>
     </div>
   </div>
 </section>
