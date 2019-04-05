@@ -2728,6 +2728,30 @@ table {
   cursor: not-allowed;
 }
 
+.hover\:cursor-auto:hover {
+  cursor: auto;
+}
+
+.hover\:cursor-default:hover {
+  cursor: default;
+}
+
+.hover\:cursor-pointer:hover {
+  cursor: pointer;
+}
+
+.hover\:cursor-wait:hover {
+  cursor: wait;
+}
+
+.hover\:cursor-move:hover {
+  cursor: move;
+}
+
+.hover\:cursor-not-allowed:hover {
+  cursor: not-allowed;
+}
+
 .block {
   display: block;
 }
@@ -7739,7 +7763,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   display: none;
 }
 
-@media screen and (min-width:992px) {
+@media screen and (min-width:768px) {
   .stick {
     display: block;
   }
@@ -9991,6 +10015,30 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   }
 
   .sm\:cursor-not-allowed {
+    cursor: not-allowed;
+  }
+
+  .sm\:hover\:cursor-auto:hover {
+    cursor: auto;
+  }
+
+  .sm\:hover\:cursor-default:hover {
+    cursor: default;
+  }
+
+  .sm\:hover\:cursor-pointer:hover {
+    cursor: pointer;
+  }
+
+  .sm\:hover\:cursor-wait:hover {
+    cursor: wait;
+  }
+
+  .sm\:hover\:cursor-move:hover {
+    cursor: move;
+  }
+
+  .sm\:hover\:cursor-not-allowed:hover {
     cursor: not-allowed;
   }
 
@@ -15661,6 +15709,30 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     cursor: not-allowed;
   }
 
+  .md\:hover\:cursor-auto:hover {
+    cursor: auto;
+  }
+
+  .md\:hover\:cursor-default:hover {
+    cursor: default;
+  }
+
+  .md\:hover\:cursor-pointer:hover {
+    cursor: pointer;
+  }
+
+  .md\:hover\:cursor-wait:hover {
+    cursor: wait;
+  }
+
+  .md\:hover\:cursor-move:hover {
+    cursor: move;
+  }
+
+  .md\:hover\:cursor-not-allowed:hover {
+    cursor: not-allowed;
+  }
+
   .md\:block {
     display: block;
   }
@@ -21325,6 +21397,30 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   }
 
   .lg\:cursor-not-allowed {
+    cursor: not-allowed;
+  }
+
+  .lg\:hover\:cursor-auto:hover {
+    cursor: auto;
+  }
+
+  .lg\:hover\:cursor-default:hover {
+    cursor: default;
+  }
+
+  .lg\:hover\:cursor-pointer:hover {
+    cursor: pointer;
+  }
+
+  .lg\:hover\:cursor-wait:hover {
+    cursor: wait;
+  }
+
+  .lg\:hover\:cursor-move:hover {
+    cursor: move;
+  }
+
+  .lg\:hover\:cursor-not-allowed:hover {
     cursor: not-allowed;
   }
 
@@ -26995,6 +27091,30 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     cursor: not-allowed;
   }
 
+  .xl\:hover\:cursor-auto:hover {
+    cursor: auto;
+  }
+
+  .xl\:hover\:cursor-default:hover {
+    cursor: default;
+  }
+
+  .xl\:hover\:cursor-pointer:hover {
+    cursor: pointer;
+  }
+
+  .xl\:hover\:cursor-wait:hover {
+    cursor: wait;
+  }
+
+  .xl\:hover\:cursor-move:hover {
+    cursor: move;
+  }
+
+  .xl\:hover\:cursor-not-allowed:hover {
+    cursor: not-allowed;
+  }
+
   .xl\:block {
     display: block;
   }
@@ -32659,6 +32779,30 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   }
 
   .xxl\:cursor-not-allowed {
+    cursor: not-allowed;
+  }
+
+  .xxl\:hover\:cursor-auto:hover {
+    cursor: auto;
+  }
+
+  .xxl\:hover\:cursor-default:hover {
+    cursor: default;
+  }
+
+  .xxl\:hover\:cursor-pointer:hover {
+    cursor: pointer;
+  }
+
+  .xxl\:hover\:cursor-wait:hover {
+    cursor: wait;
+  }
+
+  .xxl\:hover\:cursor-move:hover {
+    cursor: move;
+  }
+
+  .xxl\:hover\:cursor-not-allowed:hover {
     cursor: not-allowed;
   }
 

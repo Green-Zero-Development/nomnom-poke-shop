@@ -1,4 +1,4 @@
-<nav id="navigation-wrapper" class="w-1/2 md:w-3/4 lg:w-1/3 mr-auto text-left">
+<nav id="navigation-wrapper" class="w-1/2 md:w-1/3 mr-auto text-left">
 
 <div class="w-full text-left items-center desktop-menu">
   {{ $currentNode := . }}
@@ -7,9 +7,9 @@
   {{ end }}
 </div>
 
-<div id="mobile-menu" class="">
-  <div class="mobile-menu-button mx-auto md:mx-0 md:ml-auto text-right md:text-center md:text-left md:pr-24 w-16">
-    <a class="" href="#"><button v-on:click="menuToggle = !menuToggle" class=""><i class="text-5xl text-white fas fa-bars"></i></button></a>
+<div id="mobile-menu" class="w-full text-right pr-12">
+  <div class="mobile-menu-button">
+    <i class="text-3xl md:text-5xl text-right text-white fas fa-bars"></i>
   </div>
 </div>
 

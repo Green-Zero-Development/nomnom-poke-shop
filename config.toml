@@ -2,7 +2,7 @@ baseURL = "https://nomnom-poke-shop.netlify.com/"
 description = "This domain is established to be used for illustrative examples in documents. You may use this domain in examples without prior coordination or asking for permission."
 languageCode = "en-us"
 theme = "site-theme"
-title = "Example"
+title = "Nom Nom Poke Shop"
 [[menu.desktop_left]]
 identifier = "home"
 name = "Home"
@@ -11,28 +11,18 @@ weight = 1
 [[menu.desktop_left]]
 identifier = "Restaurant"
 name = "Restaurant"
-url = "/#restaurant"
+url = "/#restaurant-info"
 weight = 2
-[[menu.desktop_left]]
+[[menu.desktop_right]]
 identifier = "Menu"
 name = "Menu"
-url = "/#menu"
-weight = 3
-[[menu.desktop_right]]
-identifier = "drinks"
-name = "Drinks"
-url = "/#drinks"
+url = "/#menu-for-restaurant"
 weight = 1
 [[menu.desktop_right]]
-identifier = "Reservations"
-name = "Reservations"
-url = "/#reservations"
+identifier = "learn-more"
+name = "Learn More"
+url = "/#footer"
 weight = 2
-[[menu.desktop_right]]
-identifier = "ReadMe"
-name = "ReadMe"
-url = "/#readme"
-weight = 3
 [[menu.mobile]]
 identifier = "home"
 name = "Home"
@@ -41,7 +31,7 @@ weight = 1
 [[menu.mobile]]
 identifier = "Restaurant"
 name = "Restaurant"
-url = "/#restaurant"
+url = "/#restaurant-info"
 weight = 2
 [[menu.mobile]]
 identifier = "Menu"

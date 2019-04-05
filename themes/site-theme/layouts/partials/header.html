@@ -2,13 +2,17 @@
 .desktop-menu-item {
   transition: .2s;
 }
+body {
+  max-width: 1920px;
+  margin: auto;
+}
 </style>
 
 <div id="header-functions" class="z-50">
 
-<section id="header" class="container flex flex-wrap items-center z-50 header-container">
+<section id="header" class="flex flex-wrap items-center z-50 header-container">
 {{ partial "site-navi-left.html" . }}
-  <div class="w-1/2 md:w-1/4 lg:w-1/6 m-0 text-center px-2 py-8 lg:py-0 header-box">
+  <div class="w-1/2 md:w-1/4 lg:w-1/6 m-0 text-left md:text-center px-2 pl-5 py-8 lg:py-0 header-box">
     <a id="logo" class="mx-auto" href="/">
       <img class="w-32 md:w-38" src="{{ .Site.Params.logos.logo }}">
     </a>
@@ -16,20 +20,20 @@
 {{ partial "site-navi-right.html" . }}
 </section>
 
-<div id="mobile-menu" class="bg-black h-screen mobile-menu" v-bind:class="{ 'mobile-menu-toggle' : menuToggle }">
+<div class="bg-black h-screen mobile-menu">
   <div class="mobile-menu-container">
-  <div class="container flex items-center py-8">
-  <a id="logo" class="w-1/2 md:w-1/4 mx-auto md:mx-0 md:mr-auto" href="/">
-      <img class="w-32 md:w-38 md:pl-4" src="{{ .Site.Params.logos.mobile_menu_logo }}">
+  <div class="flex flex-wrap items-center pr-12 pl-5 md:pl-0 md:px-16 h-48 lg:h-32">
+  <a id="mobile-menu-logo" class="w-1/2 text-left" href="/">
+    <img class="logo" src="{{ .Site.Params.Logos.Mobile_menu_logo }}" width="130px">
   </a>
-  <a class="mx-auto sm:mx-0 sm:mr-auto md:mr-0 md:ml-auto w-16 text-center sm:text-left md:text-center md:pr-24 close-menu" v-on:click="menuToggle = !menuToggle"><i class="text-5xl text-white far fa-times-circle"></i></a>
+  <i class="w-1/2 text-3xl md:text-5xl text-white text-right fas fa-times close-menu"></i>
   </div>
-  <ul class="text-center px-0 pt-5 pb-10 mobile-menu-list">
+  <div class="flex flex-wrap mobile-menu-list">
     {{ $currentNode := . }}
     {{ range .Site.Menus.mobile }}
-    <li class="pt-2 pb-4 mobile-menu-item"><a class="{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}}" href="{{.URL}}">{{ .Name }}</a></li>
+    <a class="{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}}w-3/4 mx-auto font-raleway text-white text-center text-4xl md:text-5xl font-thin no-underline pb-8" href="{{.URL}}">{{ .Name }}</a>
     {{ end }}
-  </ul>
+  </div>
 </div>
 </div>
 
