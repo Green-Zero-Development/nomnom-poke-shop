@@ -31,7 +31,7 @@ body {
   <div class="flex flex-wrap mobile-menu-list">
     {{ $currentNode := . }}
     {{ range .Site.Menus.mobile }}
-    <a class="{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}}w-3/4 mx-auto font-raleway text-white text-center text-4xl md:text-5xl font-thin no-underline pb-8" href="{{.URL}}">{{ .Name }}</a>
+    <a class="{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}}w-3/4 mx-auto font-raleway text-white text-center text-4xl md:text-5xl font-thin no-underline pb-8 mobile-menu-item" href="{{.URL}}">{{ .Name }}</a>
     {{ end }}
   </div>
 </div>

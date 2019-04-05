@@ -36,22 +36,12 @@ weight = 2
 [[menu.mobile]]
 identifier = "Menu"
 name = "Menu"
-url = "/#menu"
+url = "/#menu-for-restaurant"
 weight = 3
 [[menu.mobile]]
-identifier = "drinks"
-name = "Drinks"
-url = "/#drinks"
-weight = 4
-[[menu.mobile]]
-identifier = "Reservations"
-name = "Reservations"
-url = "/#reservations"
-weight = 5
-[[menu.mobile]]
-identifier = "ReadMe"
-name = "ReadMe"
-url = "/#readme"
+identifier = "learn-more"
+name = "Learn More"
+url = "/#footer"
 weight = 6
 [params.Contact_Numbers]
 Fax = "555.555.5555"
