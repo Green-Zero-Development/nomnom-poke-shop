@@ -5,3 +5,7 @@ fields:
 - type: field_group_list
   name: test
   label: test
+  fields:
+  - type: field_group_list
+    label: Menu Item
+    name: menu_item
