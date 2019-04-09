@@ -1,4 +1,7 @@
 ---
 label: test
 hide_body: false
-fields: []
+fields:
+- type: field_group_list
+  name: test
+  label: test
