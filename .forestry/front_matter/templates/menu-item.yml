@@ -41,5 +41,3 @@ fields:
     required: true
   hidden: true
   default: page
-pages:
-- content/menu/Food Kind 1/food-item-1.md
