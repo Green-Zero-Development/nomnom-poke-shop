@@ -145,97 +145,40 @@ font-family: 'Kameron', serif; */
   <div class="bg-blue flex flex-wrap w-full -mt-1">
     <div class="py-5"></div>
       <div class="flex flex-wrap w-5/6 mx-auto pt-32 text-center">
-        <p class="w-full font-raleway text-2xl text-white">SNACKS X SALADS</p>
+        <p class="w-full font-raleway text-2xl text-white uppercase">Food Kind 1</p>
+        {{ range (where .Site.Pages "Params.page_kind" "food-kind-1") }}
         <div class="flex flex-wrap w-full lg:w-1/3 font-raleway text-left pt-12 px-8">
           <div class="w-2/3">
-            <p class="text-lg text-white font-bold pb-1">Primavera Salad</p>
-            <p class="text-base text-white font-thin">arugula, cherry tomato, shaved almonds, shallot vinaigrette</p>
+            <p class="text-lg text-white font-bold pb-1">{{ .Title }}</p>
+            <p class="text-base text-white font-thin">{{ .Params.Description }}</p>
           </div>
-          <p class="w-1/3 text-lg text-white text-right">$8</p>
+          <p class="w-1/3 text-lg text-white text-right">${{ .Params.Price }}</p>
         </div>
-        <div class="flex flex-wrap w-full lg:w-1/3 font-raleway text-left pt-12 px-8">
-          <div class="w-2/3">
-            <p class="text-lg text-white font-bold pb-1">Primavera Salad</p>
-            <p class="text-base text-white font-thin">arugula, cherry tomato, shaved almonds, shallot vinaigrette</p>
-          </div>
-          <p class="w-1/3 text-lg text-white text-right">$8</p>
-        </div>
-        <div class="flex flex-wrap w-full lg:w-1/3 font-raleway text-left pt-12 px-8">
-          <div class="w-2/3">
-            <p class="text-lg text-white font-bold pb-1">Primavera Salad</p>
-            <p class="text-base text-white font-thin">arugula, cherry tomato, shaved almonds, shallot vinaigrette</p>
-          </div>
-          <p class="w-1/3 text-lg text-white text-right">$8</p>
-        </div>
-        <div class="flex flex-wrap w-full lg:w-1/3 font-raleway text-left pt-12 px-8">
-          <div class="w-2/3">
-            <p class="text-lg text-white font-bold pb-1">Primavera Salad</p>
-            <p class="text-base text-white font-thin">arugula, cherry tomato, shaved almonds, shallot vinaigrette</p>
-          </div>
-          <p class="w-1/3 text-lg text-white text-right">$8</p>
-        </div>
+        {{ end }}
       </div>
       <div class="flex flex-wrap w-5/6 mx-auto pt-20 text-center">
-        <p class="w-full font-raleway text-2xl text-white">SNACKS X SALADS</p>
+        <p class="w-full font-raleway text-2xl text-white uppercase">Food kind 2</p>
+        {{ range (where .Site.Pages "Params.page_kind" "food-kind-2") }}
         <div class="flex flex-wrap w-full lg:w-1/3 font-raleway text-left pt-12 px-8">
           <div class="w-2/3">
-            <p class="text-lg text-white font-bold pb-1">Primavera Salad</p>
-            <p class="text-base text-white font-thin">arugula, cherry tomato, shaved almonds, shallot vinaigrette</p>
+            <p class="text-lg text-white font-bold pb-1">{{ .Title }}</p>
+            <p class="text-base text-white font-thin">{{ .Params.Description }}</p>
           </div>
-          <p class="w-1/3 text-lg text-white text-right">$8</p>
+          <p class="w-1/3 text-lg text-white text-right">${{ .Params.Price }}</p>
         </div>
-        <div class="flex flex-wrap w-full lg:w-1/3 font-raleway text-left pt-12 px-8">
-          <div class="w-2/3">
-            <p class="text-lg text-white font-bold pb-1">Primavera Salad</p>
-            <p class="text-base text-white font-thin">arugula, cherry tomato, shaved almonds, shallot vinaigrette</p>
-          </div>
-          <p class="w-1/3 text-lg text-white text-right">$8</p>
-        </div>
-        <div class="flex flex-wrap w-full lg:w-1/3 font-raleway text-left pt-12 px-8">
-          <div class="w-2/3">
-            <p class="text-lg text-white font-bold pb-1">Primavera Salad</p>
-            <p class="text-base text-white font-thin">arugula, cherry tomato, shaved almonds, shallot vinaigrette</p>
-          </div>
-          <p class="w-1/3 text-lg text-white text-right">$8</p>
-        </div>
-        <div class="flex flex-wrap w-full lg:w-1/3 font-raleway text-left pt-12 px-8">
-          <div class="w-2/3">
-            <p class="text-lg text-white font-bold pb-1">Primavera Salad</p>
-            <p class="text-base text-white font-thin">arugula, cherry tomato, shaved almonds, shallot vinaigrette</p>
-          </div>
-          <p class="w-1/3 text-lg text-white text-right">$8</p>
-        </div>
+        {{ end }}
       </div>
       <div class="flex flex-wrap w-5/6 mx-auto py-20 text-center">
-        <p class="w-full font-raleway text-2xl text-white">SNACKS X SALADS</p>
+        <p class="w-full font-raleway text-2xl text-white uppercase">Food kind 3</p>
+        {{ range (where .Site.Pages "Params.page_kind" "food-kind-3") }}
         <div class="flex flex-wrap w-full lg:w-1/3 font-raleway text-left pt-12 px-8">
           <div class="w-2/3">
-            <p class="text-lg text-white font-bold pb-1">Primavera Salad</p>
-            <p class="text-base text-white font-thin">arugula, cherry tomato, shaved almonds, shallot vinaigrette</p>
+            <p class="text-lg text-white font-bold pb-1">{{ .Title }}</p>
+            <p class="text-base text-white font-thin">{{ .Params.Description }}</p>
           </div>
-          <p class="w-1/3 text-lg text-white text-right">$8</p>
+          <p class="w-1/3 text-lg text-white text-right">${{ .Params.Price }}</p>
         </div>
-        <div class="flex flex-wrap w-full lg:w-1/3 font-raleway text-left pt-12 px-8">
-          <div class="w-2/3">
-            <p class="text-lg text-white font-bold pb-1">Primavera Salad</p>
-            <p class="text-base text-white font-thin">arugula, cherry tomato, shaved almonds, shallot vinaigrette</p>
-          </div>
-          <p class="w-1/3 text-lg text-white text-right">$8</p>
-        </div>
-        <div class="flex flex-wrap w-full lg:w-1/3 font-raleway text-left pt-12 px-8">
-          <div class="w-2/3">
-            <p class="text-lg text-white font-bold pb-1">Primavera Salad</p>
-            <p class="text-base text-white font-thin">arugula, cherry tomato, shaved almonds, shallot vinaigrette</p>
-          </div>
-          <p class="w-1/3 text-lg text-white text-right">$8</p>
-        </div>
-        <div class="flex flex-wrap w-full lg:w-1/3 font-raleway text-left pt-12 px-8">
-          <div class="w-2/3">
-            <p class="text-lg text-white font-bold pb-1">Primavera Salad</p>
-            <p class="text-base text-white font-thin">arugula, cherry tomato, shaved almonds, shallot vinaigrette</p>
-          </div>
-          <p class="w-1/3 text-lg text-white text-right">$8</p>
-        </div>
+        {{ end }}
       </div>
   </div>
 </section>
