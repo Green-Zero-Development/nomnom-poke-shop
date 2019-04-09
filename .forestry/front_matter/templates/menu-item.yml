@@ -1,4 +1,43 @@
 ---
 label: Menu Item
 hide_body: true
-fields: []
+fields:
+- type: text
+  label: Name
+  name: title
+  description: The name of this menu item.
+  config:
+    required: true
+- type: number
+  name: price
+  label: Price
+  description: The price of this menu item.
+  config:
+    required: true
+- type: textarea
+  config:
+    required: false
+  label: Description
+  name: description
+  description: A description of this menu item.
+- type: datetime
+  name: date
+  label: Date
+  description: Used for ordering of content (the closer this date is to today, the
+    higher this item will appear on the page).
+  config:
+    required: true
+- type: text
+  name: page_kind
+  label: page_kind
+  config:
+    required: true
+  hidden: true
+  default: food-kind-1
+- type: text
+  name: type
+  label: type
+  config:
+    required: true
+  hidden: true
+  default: page
