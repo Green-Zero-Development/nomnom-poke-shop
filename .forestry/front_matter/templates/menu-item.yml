@@ -42,4 +42,5 @@ fields:
   hidden: true
   default: page
 pages:
+- content/menu/Food Kind 1/new-menu-item.md
 - content/menu/Food Kind 1/food-item-1.md
