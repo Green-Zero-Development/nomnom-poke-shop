@@ -1,5 +1,5 @@
 ---
-label: Menu Item
+label: Menu Item (Food Kind 1)
 hide_body: true
 fields:
 - type: text
