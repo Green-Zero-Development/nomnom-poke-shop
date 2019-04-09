@@ -1,0 +1,22 @@
+---
+label: Menu Item (Food Kind 2)
+hide_body: true
+fields:
+- type: datetime
+  name: date
+  label: date
+- type: text
+  name: page_kind
+  label: page_kind
+- type: text
+  name: price
+  label: price
+- type: text
+  name: title
+  label: title
+- type: text
+  name: type
+  label: type
+- type: text
+  name: description
+  label: description
