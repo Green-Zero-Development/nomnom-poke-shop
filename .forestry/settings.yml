@@ -5,9 +5,8 @@ admin_path:
 webhook_url: 
 sections:
 - type: document
-  path: menu
+  path: content/menu.md
   label: Menu
-  match: "**/*"
 - type: directory
   path: content/menu
   label: Menu
