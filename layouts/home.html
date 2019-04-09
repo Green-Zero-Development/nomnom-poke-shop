@@ -143,8 +143,8 @@ font-family: 'Kameron', serif; */
     <img class="bg-blue rounded-full mr-5 lg:mr-20 -mb-32 menu-logo" src="/pageimg/Logo3@4x.png">
   </div>
   <div class="bg-blue flex flex-wrap w-full -mt-1">
-    <div class="py-5"></div>
-      <div class="flex flex-wrap w-5/6 mx-auto pt-32 text-center">
+    <div class="w-full h-5 text-transparent"></div>
+      <div class="flex flex-wrap w-5/6 mx-auto pt-20 text-center">
         <p class="w-full font-raleway text-2xl text-white uppercase">Food Kind 1</p>
         {{ range (where .Site.Pages "Params.page_kind" "food-kind-1") }}
         <div class="flex flex-wrap w-full lg:w-1/3 font-raleway text-left pt-12 px-8">
@@ -168,7 +168,7 @@ font-family: 'Kameron', serif; */
         </div>
         {{ end }}
       </div>
-      <div class="flex flex-wrap w-5/6 mx-auto py-20 text-center">
+      <div class="flex flex-wrap w-5/6 mx-auto pt-20 text-center">
         <p class="w-full font-raleway text-2xl text-white uppercase">Food kind 3</p>
         {{ range (where .Site.Pages "Params.page_kind" "food-kind-3") }}
         <div class="flex flex-wrap w-full lg:w-1/3 font-raleway text-left pt-12 px-8">
@@ -180,6 +180,7 @@ font-family: 'Kameron', serif; */
         </div>
         {{ end }}
       </div>
+      <div class="w-full h-32 text-transparent"></div>
   </div>
 </section>
 
