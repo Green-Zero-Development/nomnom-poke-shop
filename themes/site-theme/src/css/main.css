@@ -1,9 +1,7 @@
-@import "tailwindcss/preflight";
+@import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-@import "aos/dist/aos.css";
-@import "slick-carousel/slick/slick.css";
-
+@import "tiny-slider/dist/tiny-slider.css";
 
 @import url('https://fonts.googleapis.com/css?family=Kameron:400,700|Raleway:200,300,400,500,600,700,900');
 
@@ -23,22 +21,4 @@
 .mobile-menu-button button {
   background-color: transparent;
   border-color: transparent;
-}
-
-/* Elevator css */
-
-#elevator-button {
-  position: fixed;
-  font-size: 30px;
-  right: 5%;
-  bottom: 10%;
-  transition: .2s;
-}
-.hidegotoTop {
-  right: -100px !important;
-  transition: .2s;
-}
-#elevator-button:hover {
-  cursor: pointer;
-  padding-bottom: 5px;
 }

@@ -1,67 +1,95 @@
 baseURL = "https://nomnom-poke-shop.netlify.com/"
-description = "This domain is established to be used for illustrative examples in documents. You may use this domain in examples without prior coordination or asking for permission."
 languageCode = "en-us"
 theme = "site-theme"
 title = "Nom Nom Poke Shop"
-[[menu.desktop_left]]
-identifier = "home"
-name = "Home"
-url = "/"
-weight = 1
-[[menu.desktop_left]]
-identifier = "Restaurant"
-name = "Restaurant"
-url = "/#restaurant-info"
-weight = 2
-[[menu.desktop_right]]
-identifier = "Menu"
-name = "Menu"
-url = "/#menu-for-restaurant"
-weight = 1
-[[menu.desktop_right]]
-identifier = "learn-more"
-name = "Learn More"
-url = "/#footer"
-weight = 2
-[[menu.mobile]]
-identifier = "home"
-name = "Home"
-url = "/"
-weight = 1
-[[menu.mobile]]
-identifier = "Restaurant"
-name = "Restaurant"
-url = "/#restaurant-info"
-weight = 2
-[[menu.mobile]]
-identifier = "Menu"
-name = "Menu"
-url = "/#menu-for-restaurant"
-weight = 3
-[[menu.mobile]]
-identifier = "learn-more"
-name = "Learn More"
-url = "/#footer"
-weight = 6
-[params.Contact_Numbers]
-Fax = "555.555.5555"
-Phone = "555.555.5555"
-[params.Logos]
-dark_logo = "/pageimg/default-logo.png"
-logo = "/pageimg/Logo4@4x.png"
-mobile_menu_logo = "/pageimg/Logo3@4x.png"
+enableRobotsTXT = "true"
+[params.Meta]
+    description = ""
+    [[menu.desktop_left]]
+        identifier = "home"
+        name = "Home"
+        url = "/"
+        weight = 1
+    [[menu.desktop_left]]
+        identifier = "Restaurant"
+        name = "Restaurant"
+        url = "#restaurantInfo"
+        post = "anchor link"
+        weight = 2
+    [[menu.desktop_right]]
+        identifier = "Menu"
+        name = "Menu"
+        url = "#menuForRestaurant"
+        post = "anchor link"
+        weight = 1
+    [[menu.desktop_right]]
+        identifier = "catering"
+        name = "Catering"
+        url = "#cateringMenu"
+        post = "anchor link"
+        weight = 2
+    [[menu.mobile]]
+        identifier = "home"
+        name = "Home"
+        url = "/"
+        post = "anchor link"
+        weight = 1
+    [[menu.mobile]]
+        identifier = "Restaurant"
+        name = "Restaurant"
+        url = "#restaurantInfo"
+        post = "anchor link"
+        weight = 2
+    [[menu.mobile]]
+        identifier = "Menu"
+        name = "Menu"
+        url = "#menuForRestaurant"
+        post = "anchor link"
+        weight = 3
+    [[menu.mobile]]
+        identifier = "Catering"
+        name = "Catering"
+        url = "#cateringMenu"
+        post = "anchor link"
+        weight = 6
 [params.address]
-city = "Statesboro"
-state = "GA"
-street = "P.O. Box 134"
-zip = 30459
+    city = "Statesboro"
+    state = "GA"
+    street = "P.O. Box 134"
+    zip = 30459
+[params.contactNumbers]
+    Fax = "555.555.5555"
+    Phone = "555.555.5555"
 [params.email]
-email = "example@example.com"
+    email = "example@example.com"
+[params.Logos]
+    logo = "/v1562079194/NomNom%20Poke%20Shop/Logo4_4x.png"
+    mobileMenuLogo = "/v1562079194/NomNom%20Poke%20Shop/Logo3_4x.png"
+[params.media]
+    cloudinaryURL = "https://res.cloudinary.com/animated-eagle/image/upload"
 [params.tracking]
-google_analytics = ""
-cloudinary_url = ""
-[params.social_links]
-facebook = ""
-insta = ""
-linkedin = ""
-pinterest = ""
+    googleAnalytics = ""
+[params.publishingSettings]
+    siteInProduction = false
+
+[sitemap]
+    filename = "sitemap.xml"
+
+[mediaTypes]
+  [mediaTypes."text/noExt"]
+    suffixes = ""
+
+[outputFormats]
+    [outputFormats.sitemap]
+        baseName = "sitemap"
+        isPlainText = false
+        mediaType = "application/xml"
+        path = "/"
+    [outputFormats.redirects]
+        baseName = "_redirects"
+        isPlainText = true
+        mediaType = "text/noExt"
+        path = "/"
+
+[outputs]
+    home = ["HTML", "sitemap", "RSS", "redirects"]

@@ -1,9 +1,9 @@
-<nav id="navigation-wrapper" class="w-0 md:w-1/3 ml-auto text-right">
+<nav id="navigation-wrapper" class="w-0 md:w-5/12 text-right">
 
 <div class="w-full text-right items-center desktop-menu">
   {{ $currentNode := . }}
   {{ range .Site.Menus.desktop_left }}
-  <a class="{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}} w-1/4 font-raleway text-base text-white no-underline uppercase font-black opacity-75 hover:opacity-100 py-2 mx-3 desktop-menu-item {{ lower .Name }}-menu" href="{{.URL}}"><span class="mx-auto">{{ .Name }}</span></a>
+  <a class="{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}} {{ if .Post }}scroll{{ else }}{{ end }} w-1/4 font-raleway text-base text-white no-underline uppercase font-black opacity-75 hover:opacity-100 py-2 mx-3 desktop-menu-item {{ lower .Name }}-menu" href="{{.URL}}"><span class="mx-auto">{{ .Name }}</span></a>
   {{ end }}
 </div>
 

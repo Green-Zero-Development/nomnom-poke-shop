@@ -1,6 +1,29 @@
 {{ define "main" }}
 
 <style>
+/* slider CSS */
+.menu-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#cateringMenu {
+  background-image: url("{{ .Site.Params.media.cloudinaryURL }}/b_black,o_40/v1562601630/NomNom%20Poke%20Shop/catering.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.tns-nav {
+    display: none;
+}
+
+.tns-outer {
+    width: 100%;
+}
+
+.tns-outer button {
+    display: none;
+}
+/* END */
 .hero-section {
   background-image: url("/pageimg/poke.jpg");
   background-size: cover;
@@ -12,8 +35,8 @@
   background-color: rgba(30,109,152,.2);
 }
 
-#about-the-restaurant {
-  padding-top: 600px;
+#aboutTheRestaurant {
+ 
 }
 
 .lighter-text {
@@ -51,38 +74,13 @@
   width: 150px;
 }
 
-
-@media (min-width: 992px) {
-#about-the-restaurant {
-  padding-top: 750px;
-}
-
-.menu-logo {
-  width: 200px;
-}
-
-}
-
-@media (min-width: 1200px) {
-#about-the-restaurant {
-  padding-top: 680px;
-}
-
-}
-
-@media (min-width: 1440px) {
-  #about-the-restaurant {
-  padding-top: 100px;
-}
-}
-
 /* font-family: 'Raleway', sans-serif;
 font-family: 'Kameron', serif; */
 
 </style>
 
-<section id="site-hero" class="max-w-5xl absolute xxl:relative xxl:-mt-48 mx-auto text-center pin-t h-auto hero-section">
-  <div class="flex flex-wrap relative pin-t h-auto overlay-black">
+<section id="site-hero" class="max-w-8xl absolute lg:relative lg:-mt-48 mx-auto text-center top-0 h-auto hero-section">
+  <div class="flex flex-wrap relative top-0 h-auto overlay-black">
     <div class="w-2/3 mx-auto text-center pt-32">
       <div class="py-24"></div>
       <h1 class="font-raleway font-bold uppercase text-4xl lg:text-7xl leading-none text-white pb-8">
@@ -94,8 +92,8 @@ font-family: 'Kameron', serif; */
   </div>
 </section>
 
-<section id="about-the-restaurant" class="container flex flex-wrap pb-20">
-  <a id="restaurant-info" class="w-full h-10"></a>
+<section id="aboutTheRestaurant" class="flex flex-wrap mt-48 sm:mt-32 lg:mt-12 pt-128 md:pt-96 lg:pt-0 pb-20">
+  <a id="restaurantInfo" class="w-full h-10"></a>
   <div class="flex flex-wrap w-5/6 mx-auto">
     <div class="w-full lg:w-2/3 mx-auto pr-8">
       <h2 class="font-raleway text-xl lg:text-3xl font-medium leading-normal">Located in Park Slope, Pacific Tavern is a purveyor of fine American dining from the esteemed Chef Billy Lang.</h2>
@@ -118,35 +116,35 @@ font-family: 'Kameron', serif; */
   </div>
 </section>
 
-<section id="food-slider-section" class="flex flex-wrap">
-  <div class="w-full food-slider">
-    <div class="w-full food-slider-image" style="background-image:url('/pageimg/poke.jpg');background-size:cover;background-repeat:no-repeat;background-position-x:center;">
-      <div class="py-32"></div>
-      <div class="py-32"></div>
-      <div class="py-12"></div>
+<section id="homepage-slider" class="flex flex-wrap relative mx-auto homepage-slider">
+    <div id="menuImagesSlider" class="flex flex-wrap mx-auto">
+      {{ range (where .Site.Pages "Type" "menu_images") }}
+      {{ range index .Params.menuImages }}
+    <div style="background-image: url('https://res.cloudinary.com/animated-eagle/image/upload{{ . }}');" class="flex flex-wrap py-24 lg:pt-24 lg:pb-32 menu-image">
+      <div class="py-48"></div>
     </div>
-    <div class="w-full food-slider-image" style="background-image:url('/pageimg/poke.jpg');background-size:cover;background-repeat:no-repeat;background-position-x:center;">
-      <div class="py-32"></div>
-      <div class="py-32"></div>
-      <div class="py-12"></div>
+    {{ end }}
+    {{ else }}{{ end }}
     </div>
-    <div class="w-full food-slider-image" style="background-image:url('/pageimg/poke.jpg');background-size:cover;background-repeat:no-repeat;background-position-x:center;">
-      <div class="py-32"></div>
-      <div class="py-32"></div>
-      <div class="py-12"></div>
-    </div>
-  </div>
+    <ul class="absolute flex flex-wrap w-full pt-64 controls" id="sliderControls">
+        <div class="relative w-1/2 h-full text-left z-50 outline-none">
+          <i class="bg-black text-6xl text-white z-50 pl-5 opacity-50 hover:opacity-100 hover:cursor-pointer fas fa-chevron-left"></i>
+        </div>
+        <div class="relative w-1/2 h-full text-right z-50 outline-none">
+          <i class="bg-black text-6xl text-white z-50 pr-5 opacity-50 hover:opacity-100 hover:cursor-pointer fas fa-chevron-right"></i>
+        </div>
+    </ul>
 </section>
 
-<section id="restaurant-menu" class="flex flex-wrap">
-  <div id="menu-for-restaurant" class="bg-transparent w-full text-right z-50 -mt-16 lg:-mt-24">
-    <img class="bg-blue rounded-full mr-5 lg:mr-20 -mb-32 menu-logo" src="/pageimg/Logo3@4x.png">
+<section id="restaurantMenu" class="flex flex-wrap">
+  <div id="menuForRestaurant" class="relative bg-transparent w-full text-right z-50 -mt-16 lg:-mt-24">
+    <img class="w-48 absolute right-0 bg-blue rounded-full -mb-32 mr-24" src="/pageimg/Logo3@4x.png">
   </div>
   <div class="bg-blue flex flex-wrap w-full -mt-1">
     <div class="w-full h-5 text-transparent"></div>
       <div class="flex flex-wrap w-5/6 mx-auto pt-20 text-center">
-        <p class="w-full font-raleway text-2xl text-white uppercase">Food Kind 1</p>
-        {{ range (where .Site.Pages "Params.page_kind" "food-kind-1") }}
+        <p class="w-full font-raleway text-2xl text-white uppercase">Snack</p>
+        {{ range (where .Site.Pages "Params.page_kind" "snack") }}
         <div class="flex flex-wrap w-full lg:w-1/3 font-raleway text-left pt-12 px-8">
           <div class="w-2/3">
             <p class="text-lg text-white font-bold pb-1">{{ .Title }}</p>
@@ -157,8 +155,8 @@ font-family: 'Kameron', serif; */
         {{ end }}
       </div>
       <div class="flex flex-wrap w-5/6 mx-auto pt-20 text-center">
-        <p class="w-full font-raleway text-2xl text-white uppercase">Food kind 2</p>
-        {{ range (where .Site.Pages "Params.page_kind" "food-kind-2") }}
+        <p class="w-full font-raleway text-2xl text-white uppercase">Salad</p>
+        {{ range (where .Site.Pages "Params.page_kind" "salad") }}
         <div class="flex flex-wrap w-full lg:w-1/3 font-raleway text-left pt-12 px-8">
           <div class="w-2/3">
             <p class="text-lg text-white font-bold pb-1">{{ .Title }}</p>
@@ -169,8 +167,8 @@ font-family: 'Kameron', serif; */
         {{ end }}
       </div>
       <div class="flex flex-wrap w-5/6 mx-auto pt-20 text-center">
-        <p class="w-full font-raleway text-2xl text-white uppercase">Food kind 3</p>
-        {{ range (where .Site.Pages "Params.page_kind" "food-kind-3") }}
+        <p class="w-full font-raleway text-2xl text-white uppercase">Signature Bowls</p>
+        {{ range (where .Site.Pages "Params.page_kind" "signature-bowls") }}
         <div class="flex flex-wrap w-full lg:w-1/3 font-raleway text-left pt-12 px-8">
           <div class="w-2/3">
             <p class="text-lg text-white font-bold pb-1">{{ .Title }}</p>
@@ -179,6 +177,120 @@ font-family: 'Kameron', serif; */
           <p class="w-1/3 text-lg text-white text-right">${{ .Params.Price }}</p>
         </div>
         {{ end }}
+      </div>
+      <div class="flex flex-wrap w-5/6 mx-auto pt-20 text-center">
+        <p class="w-full font-raleway text-2xl text-white uppercase">Build Your Own $12</p>
+        {{ range (where .Site.Pages "Params.page_kind" "build_your_own") }}
+        <div class="{{ if .Params.style_override_container }}{{ .Params.style_override_container }}{{else}}{{end}} flex flex-wrap w-full lg:w-1/3 font-raleway text-left pt-12 px-8">
+          <div class="w-2/3 {{ if .Params.style_override_inner_container }}{{ .Params.style_override_inner_container }}{{else}}{{end}}">
+            <p class="text-lg text-white font-bold pb-1">{{ .Title }}</p>
+            <p class="text-base text-white font-thin">{{ .Params.Description }}</p>
+          </div>
+        </div>
+        {{ end }}
+        <div class="w-5/6 lg:w-auto border border-white mt-12 mx-auto p-2">
+          <p class="font-raleway text-lg text-white font-bold pb-1">Extra Sauce .50c</p>
+        </div>
+        <div class="w-5/6 lg:w-auto border border-white mt-12 mx-auto p-2">
+          <p class="font-raleway text-lg text-white font-bold pb-1">Additional Add In .50c</p>
+        </div>
+        <div class="w-5/6 lg:w-auto border border-white mt-12 mx-auto p-2">
+          <p class="font-raleway text-lg text-white font-bold pb-1">Spicy Tuna Add-In $2 (Limited Availability)</p>
+        </div>
+      </div>
+      <div class="flex flex-wrap w-5/6 mx-auto pt-20 text-center">
+        <p class="w-full font-raleway text-2xl text-white uppercase">Sides</p>
+        {{ range (where .Site.Pages "Params.page_kind" "sides") }}
+        <div class="flex flex-wrap w-full lg:w-1/3 font-raleway text-left pt-12 px-8">
+          <div class="w-2/3">
+            <p class="text-lg text-white font-bold pb-1">{{ .Title }}</p>
+            <p class="text-base text-white font-thin">{{ .Params.Description }}</p>
+          </div>
+          <p class="w-1/3 text-lg text-white text-right">${{ .Params.Price }}</p>
+        </div>
+        {{ end }}
+      </div>
+      <div class="flex flex-wrap w-5/6 mx-auto pt-20 text-center">
+        <p class="w-full font-raleway text-2xl text-white uppercase">Beverages</p>
+        {{ range (where .Site.Pages "Params.page_kind" "beverages") }}
+        <div class="flex flex-wrap w-full lg:w-1/3 font-raleway text-left pt-12 px-8">
+          <div class="w-2/3">
+            <p class="text-lg text-white font-bold pb-1">{{ .Title }}</p>
+            <p class="text-base text-white font-thin">{{ .Params.Description }}</p>
+          </div>
+          <p class="w-1/3 text-lg text-white text-right">${{ .Params.Price }}</p>
+        </div>
+        {{ end }}
+      </div>
+      <div class="w-full h-32 text-transparent"></div>
+  </div>
+</section>
+
+<section id="cateringMenu" class="flex flex-wrap">
+  <div class="w-full bg-white py-3">
+    <h2 class="font-raleway text-5xl text-center">Catering</h2>
+  </div>
+  <div class="flex flex-wrap w-full -mt-1">
+    <div class="w-full h-5 text-transparent"></div>
+      <div class="flex flex-wrap w-5/6 mx-auto pt-20 text-center">
+        <p class="w-full font-raleway text-2xl text-white uppercase">Choice of Poke</p>
+        {{ range (where .Site.Pages "Params.page_kind" "choice_of_poke") }}
+        <div class="flex flex-wrap w-full lg:w-1/3 font-raleway text-left pt-12 px-8">
+          <div class="w-2/3">
+            <p class="text-lg text-white font-bold pb-1">{{ .Title }}</p>
+            <p class="text-base text-white font-thin">{{ .Params.Description }}</p>
+          </div>
+        </div>
+        {{ end }}
+        <div class="w-9/12 bg-white mt-12 mx-auto p-2 rounded">
+          <p class="font-raleway text-lg text-blue font-bold pb-1">Please, no substitutions</p>
+        </div>
+      </div>
+      <div class="flex flex-wrap w-5/6 mx-auto pt-20 text-center">
+        <p class="w-full font-raleway text-2xl text-white uppercase">Individual Bowls</p>
+        <div class="w-9/12 bg-white mt-12 mx-auto p-2 rounded">
+          <p class="font-raleway text-lg text-blue font-bold pb-1">Includes a portion of Poke and choice of sushi rice, black rice, or asian mixed greens</p>
+        </div>
+        <p class="w-full font-raleway text-2xl text-white mt-12 uppercase">Choose From:</p>
+        {{ range (where .Site.Pages "Params.page_kind" "individual_bowls") }}
+        <div class="{{ if .Params.style_override_container }}{{ .Params.style_override_container }}{{else}}{{end}} flex flex-wrap w-full lg:w-1/3 font-raleway text-left pt-12 px-8">
+          <div class="w-2/3 {{ if .Params.style_override_inner_container }}{{ .Params.style_override_inner_container }}{{else}}{{end}}">
+            <p class="text-lg text-white font-bold pb-1">{{ .Title }}</p>
+            <p class="text-base text-white font-thin">{{ .Params.Description }}</p>
+          </div>
+          <p class="w-1/3 text-lg text-white text-right">{{ if .Params.style_override_container }}{{else}}${{end}}{{ .Params.Price }}</p>
+        </div>
+        {{ end }}
+      </div>
+      <div class="flex flex-wrap w-5/6 mx-auto pt-20 text-center">
+        <p class="w-full font-raleway text-2xl text-white uppercase">Family Style</p>
+        <div class="w-5/6 lg:w-3/12 bg-white mt-12 mx-auto p-2">
+          <p class="font-raleway text-lg text-blue font-bold pb-1">Small 6-10 People</p>
+        </div>
+        <div class="w-5/6 lg:w-3/12 bg-white mt-12 mx-auto p-2">
+          <p class="font-raleway text-lg text-blue font-bold pb-1">Medium 11-15 People</p>
+        </div>
+        <div class="w-5/6 lg:w-3/12 bg-white mt-12 mx-auto p-2">
+          <p class="font-raleway text-lg text-blue font-bold pb-1">Large 16-20 People</p>
+        </div>
+        {{ range (where .Site.Pages "Params.page_kind" "family_style") }}
+        <div class="flex flex-wrap w-full lg:w-1/3 font-raleway text-left pt-12 px-8">
+          <div class="w-2/3">
+            <p class="text-lg text-white font-bold pb-1">{{ .Title }}</p>
+            <p class="text-base text-white font-thin">{{ .Params.Description }}</p>
+          </div>
+          <p class="w-1/3 text-lg text-white text-right">${{ .Params.Price }}</p>
+        </div>
+        {{ end }}
+        <div class="w-5/6 lg:w-auto bg-white mt-12 mx-auto p-2">
+          <p class="font-raleway text-lg text-blue font-bold pb-1">Napkins and Utensils Provided </p>
+        </div>
+        <div class="w-5/6 lg:w-auto bg-white mt-12 mx-auto p-2">
+          <p class="font-raleway text-lg text-blue font-bold pb-1">48 Hour Cancellation Required</p>
+        </div>
+        <div class="w-5/6 lg:w-auto bg-white mt-12 mx-auto p-2">
+          <p class="font-raleway text-lg text-blue font-bold pb-1">3 Day Cancellation Notice Appreciated (Your Fish Comes From Hawaii and Vancouver)</p>
+        </div>
       </div>
       <div class="w-full h-32 text-transparent"></div>
   </div>

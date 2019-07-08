@@ -12,9 +12,9 @@ body {
 
 <section id="header" class="flex flex-wrap items-center z-50 header-container">
 {{ partial "site-navi-left.html" . }}
-  <div class="w-1/2 md:w-1/4 lg:w-48 m-0 text-left md:text-center px-2 pl-5 py-8 lg:py-0 header-box">
+  <div class="w-1/2 md:w-2/12 text-left md:text-center px-5 md:px-2 py-8 lg:py-0 header-box">
     <a id="logo" class="mx-auto" href="/">
-      <img class="w-32 md:w-38" src="{{ .Site.Params.logos.logo }}">
+      <img class="w-32 md:w-40 mr-auto md:mx-auto" src="{{ .Site.Params.media.cloudinaryURL }}{{ .Site.Params.logos.logo }}">
     </a>
   </div>
 {{ partial "site-navi-right.html" . }}
@@ -24,7 +24,7 @@ body {
   <div class="mobile-menu-container">
   <div class="flex flex-wrap items-center pr-12 pl-5 md:pl-0 md:px-16 h-48 lg:h-32">
   <a id="mobile-menu-logo" class="w-1/2 text-left" href="/">
-    <img class="logo" src="{{ .Site.Params.Logos.Mobile_menu_logo }}" width="130px">
+    <img class="w-32 logo" src="{{ .Site.Params.media.cloudinaryURL }}{{ .Site.Params.Logos.MobileMenuLogo }}">
   </a>
   <i class="w-1/2 text-3xl md:text-5xl text-white text-right fas fa-times close-menu"></i>
   </div>
