@@ -20,6 +20,15 @@ closemenu.onclick = function() {
   body.classList.toggle('overflow-hidden');
 }
 
+var menuClick = document.querySelectorAll('.mobile-menu-item');
+
+menuClick.forEach(function(menuItem) {
+menuItem.addEventListener('click', function() {
+	mobilemenu.classList.toggle('mobile-menu-toggle');
+	body.classList.toggle('overflow-hidden');
+  });
+});
+
 // END
 
 // Sliders
@@ -67,6 +76,4 @@ function scrollAnchors(e, respond = null) {
 			clearInterval(checkIfDone);
 		}
 	}, 100);
-}
-
-// END
+};
