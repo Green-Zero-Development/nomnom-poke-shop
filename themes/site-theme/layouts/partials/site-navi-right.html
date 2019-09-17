@@ -5,11 +5,13 @@
   {{ range .Site.Menus.desktop_right }}
   <a class="{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}} {{ if .Post }}scroll{{ else }}{{ end }} w-1/4 font-raleway text-base text-white no-underline uppercase font-black opacity-75 hover:opacity-100 py-2 mx-3 desktop-menu-item {{ lower .Name }}-menu" href="{{.URL}}"><span class="mx-auto">{{ .Name }}</span></a>
   {{ end }}
+  <button class='font-raleway text-base text-white no-underline uppercase font-black opacity-75 hover:opacity-100 py-2 mx-3 desktop-menu-item upserve-olo-button upserve-olo-opener'>Order Online</button>
 </div>
 
-<div id="mobile-menu" class="w-full text-right pr-12">
-  <div class="mobile-menu-button">
-    <i class="text-3xl md:text-5xl text-right text-white fas fa-bars"></i>
+<div id="mobile-menu" class="flex flex-wrap items-center w-full pr-12">
+  <button class='hidden sm:block md:hidden font-raleway text-lg text-white no-underline uppercase font-black opacity-75 hover:opacity-100 ml-auto py-2 mx-3 desktop-menu-item upserve-olo-button upserve-olo-opener'>Order Online</button>
+  <div class="w-auto ml-auto sm:ml-0 mobile-menu-button">
+    <i class="text-3xl md:text-5xl text-right text-white pl-2 fas fa-bars"></i>
   </div>
 </div>
 

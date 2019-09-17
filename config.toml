@@ -11,15 +11,15 @@ enableRobotsTXT = "true"
         url = "/"
         weight = 1
     [[menu.desktop_left]]
-        identifier = "Restaurant"
-        name = "Restaurant"
-        url = "#restaurantInfo"
+        identifier = "menu"
+        name = "Menu"
+        url = "#menuForRestaurant"
         post = "anchor link"
         weight = 2
     [[menu.desktop_right]]
-        identifier = "Menu"
-        name = "Menu"
-        url = "#menuForRestaurant"
+        identifier = "catering"
+        name = "Catering"
+        url = "#cateringMenu"
         post = "anchor link"
         weight = 1
     [[menu.desktop_right]]
