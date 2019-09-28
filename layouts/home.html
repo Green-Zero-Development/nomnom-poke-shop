@@ -25,11 +25,12 @@
 }
 /* END */
 .hero-section {
-  background-image: url("/pageimg/poke.jpg");
+  background-image: url("https://res.cloudinary.com/animated-eagle/image/upload/b_black,o_50/v1569690396/NomNom%20Poke%20Shop/Tempura_Bowl.jpg");
   background-size: cover;
   width: 100%;
   z-index: -999;
-  background-position-x: center;
+  background-position-y: top;
+  background-attachment: fixed;
 }
 .overlay-black {
   background-color: rgba(30,109,152,.2);
@@ -81,33 +82,31 @@ font-family: 'Kameron', serif; */
 
 <section id="site-hero" class="max-w-8xl absolute lg:relative lg:-mt-48 mx-auto text-center top-0 h-auto hero-section">
   <div class="flex flex-wrap relative top-0 h-auto overlay-black">
-    <div class="w-2/3 mx-auto text-center pt-32">
+    <div class="w-5/6 md:w-2/3 mx-auto text-center pt-32">
       <div class="py-24"></div>
-      <h1 class="font-raleway font-bold uppercase text-4xl lg:text-7xl leading-none text-white pb-8">
-          SITE HEADLINE GOES HERE
+      <h1 class="font-raleway font-bold uppercase text-4xl sm:text-6xl lg:text-7xl leading-none text-white pb-8">
+          Poké Bowls Made to Order
       </h1>
-      <h2 class="font-raleway text-xl text-white font-thin">SOMETHING ABOUT THE COMPANY HERE</h2>
+      <h2 class="font-raleway text-xl text-white font-thin">From Fresh & Responsibly Sourced Ingredients</h2>
       <div class="py-32"></div>
     </div>
   </div>
 </section>
 
-<section id="aboutTheRestaurant" class="flex flex-wrap mt-48 sm:mt-32 lg:mt-12 pt-128 md:pt-96 lg:pt-0 pb-20">
+<section id="aboutTheRestaurant" class="flex flex-wrap mt-32 sm:mt-56 md:mt-72 lg:mt-12 pt-128 md:pt-96 lg:pt-0 pb-20">
   <a id="restaurantInfo" class="w-full h-10"></a>
   <div class="flex flex-wrap w-5/6 mx-auto">
     <div class="w-full lg:w-2/3 mx-auto pr-8">
-      <h2 class="font-raleway text-xl lg:text-3xl font-medium leading-normal">Located in Park Slope, Pacific Tavern is a purveyor of fine American dining from the esteemed Chef Billy Lang.</h2>
-      <h4 class="font-raleway text-sm uppercase font-thin pt-6 pb-12">PHOTOS BY NICOLE FRANZEN</h4>
+      <h2 class="font-raleway text-xl lg:text-3xl font-medium leading-normal pb-12">Hawaiian - Japanese Poké Shop located in Starland District Savannah, GA</h2>
       <p class="font-raleway text-base font-normal pb-6 leading-normal tracking-wide lighter-text">Pacific Tavern opened in May 2010 and is located inside the Smith Hotel Brooklyn. Since then, Golden Spork winner Chef Lang has been serving both quality interpretations of classic dishes and daring new ventures into the uncharted territories of food.</p>
       <p class="font-raleway text-base font-normal leading-normal tracking-wide lighter-text">Pacific Tavern's interior, designed by the award-winning Hayden Collective, reflects the hip sensibilities of the surrounding area while also paying tribute to Brooklyn's storied past. The multi-level restaurant offers the choice to observe passers-by in the glass-encased Cascade Bar on the 2nd floor, or watch the art of cooking as it occurs in the open-kitchen dining room.</p>
     </div>
     <div class="w-full lg:w-1/5 mx-auto pt-16 lg:pt-0">
       <h2 class="font-raleway text-base font-thin uppercase pb-5">Phone</h2>
-      <h4 class="font-raleway text-base font-light pb-16 lighter-text">(347) 555-1234</h4>
+      <h4 class="font-raleway text-base font-light pb-16 lighter-text">{{ .Site.Params.contactNumbers.Phone }}</h4>
       <h2 class="font-raleway text-base font-thin uppercase pb-5">Location</h2>
-      <h4 class="font-raleway text-base font-light pb-3 lighter-text">74 5th Avenue</h4>
-      <h4 class="font-raleway text-base font-light pb-3 lighter-text">at St. Marks Place</h4>
-      <h4 class="font-raleway text-base font-light pb-16 lighter-text">Brooklyn, NY 11217</h4>
+      <h4 class="font-raleway text-base font-light pb-3 lighter-text">{{ .Site.Params.Address.Street }}</h4>
+      <h4 class="font-raleway text-base font-light pb-16 lighter-text">{{ .Site.Params.Address.City }}, {{ .Site.Params.Address.State }} {{ .Site.Params.Address.Zip }}</h4>
       <h2 class="font-raleway text-base font-thin uppercase pb-5">Hours</h2>
       <h4 class="font-raleway text-base font-light pb-3 lighter-text"><span class="font-bold">M-Th</span> 5p–11p</h4>
       <h4 class="font-raleway text-base font-light pb-3 lighter-text"><span class="font-bold">F-Sa</span> 12p–11p</h4>
@@ -117,10 +116,10 @@ font-family: 'Kameron', serif; */
 </section>
 
 <section id="homepage-slider" class="flex flex-wrap relative mx-auto homepage-slider">
-    <div id="menuImagesSlider" class="flex flex-wrap mx-auto">
+    <div id="menuImagesSlider" class="flex flex-wrap bg-grey-lighter mx-auto">
       {{ range (where .Site.Pages "Type" "menu_images") }}
       {{ range index .Params.menuImages }}
-    <div style="background-image: url('https://res.cloudinary.com/animated-eagle/image/upload{{ . }}');" class="flex flex-wrap py-24 lg:pt-24 lg:pb-32 menu-image">
+    <div style="background-image: url('https://res.cloudinary.com/animated-eagle/image/upload{{ . }}'); background-size: contain;" class="flex flex-wrap bg-center bg-contain py-24 lg:pt-24 lg:pb-32 menu-image">
       <div class="py-48"></div>
     </div>
     {{ end }}
@@ -138,11 +137,11 @@ font-family: 'Kameron', serif; */
 
 <section id="restaurantMenu" class="flex flex-wrap">
   <div id="menuForRestaurant" class="relative bg-transparent w-full text-right z-50 -mt-16 lg:-mt-24">
-    <img class="w-48 absolute right-0 bg-blue rounded-full -mb-32 mr-24" src="/pageimg/Logo3@4x.png">
+    <img class="w-32 md:w-48 absolute right-0 bg-blue rounded-full -mb-32 mr-24" src="/pageimg/Logo3@4x.png">
   </div>
   <div class="bg-blue flex flex-wrap w-full -mt-1">
     <div class="w-full h-5 text-transparent"></div>
-      <div class="flex flex-wrap w-5/6 mx-auto pt-20 text-center">
+      <div class="flex flex-wrap w-11/12 md:w-5/6 mx-auto pt-20 text-center">
         <p class="w-full font-raleway text-2xl text-white uppercase">Snack</p>
         {{ range (where .Site.Pages "Params.page_kind" "snack") }}
         <div class="flex flex-wrap w-full lg:w-1/3 font-raleway text-left pt-12 px-8">
@@ -154,7 +153,7 @@ font-family: 'Kameron', serif; */
         </div>
         {{ end }}
       </div>
-      <div class="flex flex-wrap w-5/6 mx-auto pt-20 text-center">
+      <div class="flex flex-wrap w-11/12 md:w-5/6 mx-auto pt-20 text-center">
         <p class="w-full font-raleway text-2xl text-white uppercase">Salad</p>
         {{ range (where .Site.Pages "Params.page_kind" "salad") }}
         <div class="flex flex-wrap w-full lg:w-1/3 font-raleway text-left pt-12 px-8">
@@ -166,7 +165,7 @@ font-family: 'Kameron', serif; */
         </div>
         {{ end }}
       </div>
-      <div class="flex flex-wrap w-5/6 mx-auto pt-20 text-center">
+      <div class="flex flex-wrap w-11/12 md:w-5/6 mx-auto pt-20 text-center">
         <p class="w-full font-raleway text-2xl text-white uppercase">Signature Bowls</p>
         {{ range (where .Site.Pages "Params.page_kind" "signature-bowls") }}
         <div class="flex flex-wrap w-full lg:w-1/3 font-raleway text-left pt-12 px-8">
@@ -178,17 +177,18 @@ font-family: 'Kameron', serif; */
         </div>
         {{ end }}
       </div>
-      <div class="flex flex-wrap w-5/6 mx-auto pt-20 text-center">
+      <div class="flex flex-wrap w-11/12 md:w-5/6 mx-auto pt-20 text-center">
         <p class="w-full font-raleway text-2xl text-white uppercase">Build Your Own $12</p>
         {{ range (where .Site.Pages "Params.page_kind" "build_your_own") }}
         <div class="{{ if .Params.style_override_container }}{{ .Params.style_override_container }}{{else}}{{end}} flex flex-wrap w-full lg:w-1/3 font-raleway text-left pt-12 px-8">
-          <div class="w-2/3 {{ if .Params.style_override_inner_container }}{{ .Params.style_override_inner_container }}{{else}}{{end}}">
+          <div class="md:w-2/3 {{ if .Params.style_override_inner_container }}{{ .Params.style_override_inner_container }}{{else}}{{end}}">
             <p class="text-lg text-white font-bold pb-1">{{ .Title }}</p>
             <p class="text-base text-white font-thin">{{ .Params.Description }}</p>
           </div>
         </div>
         {{ end }}
-        <div class="w-5/6 lg:w-auto border border-white mt-12 mx-auto p-2">
+        <div class="w-1/3"></div>
+        <div class="w-5/6 lg:w-auto flex-wrap border border-white mt-12 mx-auto p-2">
           <p class="font-raleway text-lg text-white font-bold pb-1">Extra Sauce .50c</p>
         </div>
         <div class="w-5/6 lg:w-auto border border-white mt-12 mx-auto p-2">
@@ -198,7 +198,7 @@ font-family: 'Kameron', serif; */
           <p class="font-raleway text-lg text-white font-bold pb-1">Spicy Tuna Add-In $2 (Limited Availability)</p>
         </div>
       </div>
-      <div class="flex flex-wrap w-5/6 mx-auto pt-20 text-center">
+      <div class="flex flex-wrap w-11/12 md:w-5/6 mx-auto pt-20 text-center">
         <p class="w-full font-raleway text-2xl text-white uppercase">Sides</p>
         {{ range (where .Site.Pages "Params.page_kind" "sides") }}
         <div class="flex flex-wrap w-full lg:w-1/3 font-raleway text-left pt-12 px-8">
@@ -210,7 +210,7 @@ font-family: 'Kameron', serif; */
         </div>
         {{ end }}
       </div>
-      <div class="flex flex-wrap w-5/6 mx-auto pt-20 text-center">
+      <div class="flex flex-wrap w-11/12 md:w-5/6 mx-auto pt-20 text-center">
         <p class="w-full font-raleway text-2xl text-white uppercase">Beverages</p>
         {{ range (where .Site.Pages "Params.page_kind" "beverages") }}
         <div class="flex flex-wrap w-full lg:w-1/3 font-raleway text-left pt-12 px-8">
@@ -232,11 +232,11 @@ font-family: 'Kameron', serif; */
   </div>
   <div class="flex flex-wrap w-full -mt-1">
     <div class="w-full h-5 text-transparent"></div>
-      <div class="flex flex-wrap w-5/6 mx-auto pt-20 text-center">
+      <div class="flex flex-wrap w-11/12 md:w-5/6 mx-auto pt-20 text-center">
         <p class="w-full font-raleway text-2xl text-white uppercase">Choice of Poke</p>
         {{ range (where .Site.Pages "Params.page_kind" "choice_of_poke") }}
         <div class="flex flex-wrap w-full lg:w-1/3 font-raleway text-left pt-12 px-8">
-          <div class="w-2/3">
+          <div class="md:w-2/3">
             <p class="text-lg text-white font-bold pb-1">{{ .Title }}</p>
             <p class="text-base text-white font-thin">{{ .Params.Description }}</p>
           </div>
@@ -246,7 +246,7 @@ font-family: 'Kameron', serif; */
           <p class="font-raleway text-lg text-blue font-bold pb-1">Please, no substitutions</p>
         </div>
       </div>
-      <div class="flex flex-wrap w-5/6 mx-auto pt-20 text-center">
+      <div class="flex flex-wrap w-11/12 md:w-5/6 mx-auto pt-20 text-center">
         <p class="w-full font-raleway text-2xl text-white uppercase">Individual Bowls</p>
         <div class="w-9/12 bg-white mt-12 mx-auto p-2 rounded">
           <p class="font-raleway text-lg text-blue font-bold pb-1">Includes a portion of Poke and choice of sushi rice, black rice, or asian mixed greens</p>
@@ -262,7 +262,7 @@ font-family: 'Kameron', serif; */
         </div>
         {{ end }}
       </div>
-      <div class="flex flex-wrap w-5/6 mx-auto pt-20 text-center">
+      <div class="flex flex-wrap w-11/12 md:w-5/6 mx-auto pt-20 text-center">
         <p class="w-full font-raleway text-2xl text-white uppercase">Family Style</p>
         <div class="w-5/6 lg:w-3/12 bg-white mt-12 mx-auto p-2">
           <p class="font-raleway text-lg text-blue font-bold pb-1">Small 6-10 People</p>
@@ -298,15 +298,15 @@ font-family: 'Kameron', serif; */
 
 <section id="social-media-icons" class="bg-white flex flex-wrap py-8">
   <div class="w-5/6 mx-auto text-center">
-    <a href="/" class="text-blue hover:text-blue-dark no-underline">
+    <a href="https://www.facebook.com/Nom-Nom-Poke-Shop-105096784226882/" class="text-blue hover:text-blue-dark no-underline">
       <i class="text-3xl p-3 fab fa-facebook"></i>
     </a>
-    <a href="/" class="text-blue hover:text-blue-dark no-underline">
+    <a href="https://www.instagram.com/nomnompoke/" class="text-blue hover:text-blue-dark no-underline">
       <i class="text-3xl p-3 fab fa-instagram"></i>
     </a>
-    <a href="/" class="text-blue hover:text-blue-dark no-underline">
+    <!-- <a href="/" class="text-blue hover:text-blue-dark no-underline">
       <i class="text-3xl p-3 fab fa-twitter"></i>
-    </a>
+    </a> -->
   </div>
 
 

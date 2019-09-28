@@ -6,9 +6,10 @@ enableRobotsTXT = "true"
 [params.Meta]
     description = ""
     [[menu.desktop_left]]
-        identifier = "home"
-        name = "Home"
-        url = "/"
+        identifier = "about-the-restaurant"
+        name = "About the Restaurant"
+        url = "#aboutTheRestaurant"
+        post = "anchor link"
         weight = 1
     [[menu.desktop_left]]
         identifier = "menu"
@@ -29,9 +30,9 @@ enableRobotsTXT = "true"
         post = "anchor link"
         weight = 2
     [[menu.mobile]]
-        identifier = "home"
-        name = "Home"
-        url = "/"
+        identifier = "about-the-restaurant"
+        name = "About the Restaurant"
+        url = "#aboutTheRestaurant"
         post = "anchor link"
         weight = 1
     [[menu.mobile]]
@@ -53,15 +54,15 @@ enableRobotsTXT = "true"
         post = "anchor link"
         weight = 6
 [params.address]
-    city = "Statesboro"
+    city = "Savannah"
     state = "GA"
-    street = "P.O. Box 134"
-    zip = 30459
+    street = "1821 Bull St."
+    zip = 31401
 [params.contactNumbers]
     Fax = "555.555.5555"
-    Phone = "555.555.5555"
+    Phone = "(912) 777-4074"
 [params.email]
-    email = "example@example.com"
+    email = "nomnompokesav@gmail.com"
 [params.Logos]
     logo = "/v1562079194/NomNom%20Poke%20Shop/Logo4_4x.png"
     mobileMenuLogo = "/v1562079194/NomNom%20Poke%20Shop/Logo3_4x.png"
