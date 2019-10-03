@@ -4,6 +4,6 @@ page_kind = "signature-bowls"
 price = "12"
 title = "Classic Tuna"
 type = "page"
-description = "Ahi Tuna, White Onion, Ogo, Macadamia Nuts, Lemon Tamari"
+description = "Ahi Tuna, White Onion, Ogo, Macadamia Nuts, Lemon Tamari, Avocado, Cucumber"
 
 +++

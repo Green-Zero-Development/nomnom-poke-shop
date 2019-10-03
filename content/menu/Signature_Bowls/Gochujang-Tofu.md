@@ -4,6 +4,6 @@ page_kind = "signature-bowls"
 price = "12"
 title = "Gochujang Tofu"
 type = "page"
-description = "Fried Tofu, Asparagus, Braised Shiitake, Watercress, Sweet Heat Gochujang"
+description = "Fried Tofu, Asparagus, Pickled Shiitake, Watercress, Sweet Heat Gochujang"
 
 +++
