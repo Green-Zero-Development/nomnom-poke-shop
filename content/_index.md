@@ -1,6 +1,6 @@
 +++
 layout = "index"
-title = "Home | NomNom Poke Shop"
+title = "Home"
 type = "page"
 url = "/"
 author = "NomNom Poke Shop"

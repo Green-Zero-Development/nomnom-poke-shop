@@ -4,6 +4,6 @@ page_kind = "build_your_own"
 price = ""
 title = "Base Pick"
 type = "page"
-description = "Sushi Rice, Matcha Soba Slaw, Mixed Greens, Black Rice"
+description = "Sushi Rice, Mixed Greens, Black Rice"
 weight = 1
 +++
