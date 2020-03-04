@@ -35,8 +35,12 @@
     "micromodal": "^0.4.0",
     "mini-css-extract-plugin": "^0.4.5",
     "node-sass": "^4.11.0",
+    "puppeteer": "^2.1.1",
     "scrollreveal": "^4.0.5",
     "tiny-slider": "^2.9.2",
-    "webpack-cli": "^3.1.2"
+    "web-scraper-js": "^1.1.0",
+    "webpack-cli": "^3.1.2",
+    "website-scraper": "^4.2.0",
+    "ws": "^7.2.1"
   }
 }
